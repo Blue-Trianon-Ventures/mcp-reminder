@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mcp-reminder</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Adjust node path: /opt/homebrew/bin/node (Apple Silicon) or /usr/local/bin/node (Intel) -->
+        <string>__NODE_PATH__</string>
+        <string>__INSTALL_DIR__/dist/server.js</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>__INSTALL_DIR__</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>MCP_REMINDERS_PORT</key>
+        <string>18800</string>
+        <key>MCP_REMINDERS_BIND</key>
+        <string>0.0.0.0</string>
+        <key>MCP_REMINDERS_TOKEN</key>
+        <string>__TOKEN__</string>
+        <key>MCP_REMINDERS_LOG_DIR</key>
+        <string>__INSTALL_DIR__/logs</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>__INSTALL_DIR__/logs/stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__INSTALL_DIR__/logs/stderr.log</string>
+</dict>
+</plist>
