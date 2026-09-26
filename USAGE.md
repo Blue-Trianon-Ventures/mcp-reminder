@@ -1,3 +1,5 @@
+> **Retired 2026-09-26.** This server now runs from `/Users/Shared/SharedGitRepo/mcp-velocibot` (`dist/reminders.js`, launchd label unchanged), on the shared auth core: header-only per-client bearer tokens from `~/.config/mcp-velocibot/tokens.env`, loopback bind, public `reminders.nautflare.com` plus tailnet `ultrathor.munchkin-halfbeak.ts.net`. The `?token=` query form below is **no longer accepted** (401). See mcp-velocibot/README.md and runbook STEP 3. This repo is kept for history only.
+
 # mcp-reminder
 
 MCP server that exposes Apple Reminders on macOS via the streamable-http transport. Runs on a Mac with Reminders.app access and serves remote MCP clients over HTTP/HTTPS.
